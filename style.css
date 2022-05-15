@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root{
+    --overpass-300-600: 'Overpass', sans-serif;
+    --ubuntu-400-500-700: 'Ubuntu', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+nav{
+    display: none;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 5em;
+}
+
+.sect-1{
+    background-image: linear-gradient(100deg,
+        hsl(13, 100%, 72%),
+        hsl(353, 100%, 62%)
+    );
+    height: 75vh;
+    border-bottom-left-radius: 70px;
+}
+
+.head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 2em auto;
+}
+
+.cta{
+    width: 90%;
+    margin: auto;
+    margin-top: 7em;
+}
+
+.cta h1{
+    font-size: 3em;
+    color: hsl(0, 0%, 100%);
+    font-family: var(--ubuntu-400-500-700);
+    font-weight: 400;
+}
+
+.sect-1 p{
+    color: hsl(0, 0%, 100%);
+    font-family: var(--overpass-300-600);
+    font-weight: 300;
+    margin: 20px;
+}
+
+.sect-1 button{
+    background-color: none;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-family: var(--ubuntu-400-500-700);
+    font-weight: 600;
+}
+
+.sect-1 button:nth-of-type(1){
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(356, 100%, 66%);
+    cursor: pointer;
+}
+
+.sect-1 button:nth-of-type(2){
+    background-color: hsl(2, 100%, 69%);
+    color: hsl(0, 0%, 100%);
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.sect-2 img, .sect-3 img, .sect-4 img{
+    width: 100%;
+}
+
+.sect-2{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.sect-2 h2{
+    color: hsl(209, 36%, 31%);
+    font-family: var(--ubuntu-400-500-700);
+    font-weight: 500;
+}
+
+.info{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.sect-2 p{
+    font-family: var(--overpass-300-600);
+    font-weight: 300;
+    color: hsl(207, 13%, 34%);
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.sect-3{
+    background-image: url('./images/bg-pattern-circles.svg'), linear-gradient(100deg, 
+    hsl(237, 17%, 21%),
+    hsl(237, 23%, 32%));
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: -100px -240px, 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    height: 75vh;
+    border-radius: 0px 100px 0px 100px;
+    margin-top: 10em;
+}
+
+.sect-3 img{
+    margin-top: -150px;
+}
+
+.sect-3 p{
+    font-family: var(--overpass-300-600);
+    font-weight: 300;
+    color: hsl(0, 0%, 100%);
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.sect-3 h2{
+    color: hsl(0, 0%, 100%);
+    font-size: 2em;
+    font-family: var(--overpass-300-600);
+    font-weight: 600;
+}
+
+.sect-4{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.sect-4 h2{
+    color: hsl(209, 36%, 31%);
+    font-family: var(--ubuntu-400-500-700);
+    font-weight: 500;
+}
+
+.sect-4 p{
+    font-family: var(--overpass-300-600);
+    font-weight: 300;
+    color: hsl(207, 13%, 34%);
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(240, 10%, 16%);
+    height: 90vh;
+    border-top-right-radius: 100px;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--overpass-300-600);
+    font-weight: 300;
+}
+
+footer img{
+    width: 100px;
+    margin: 2em;
+}
+
+footer h4{
+    margin: 15px;
+    color: hsl(0, 0%, 100%);
+}
+
+footer ul a{
+    list-style: none;
+    text-decoration: none;
+    color: hsl(240, 2%, 79%);
+}
+/*VECCHIO *{
+    box-sizing: border-box;
+    margin: 0;
+    @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+    font-family: 'Overpass', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(hsl(13, 100%, 72%),hsl(353, 100%, 62%));
+    padding: 30px 10%;
+}
+
+.nav_links a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 20px;
+} */
