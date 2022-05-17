@@ -20,13 +20,15 @@ body{
     gap: 5em;
 }
 
-/* .head .logo{
-    display: none;
+.head .logo{
+    display: block;
+    cursor: pointer;
 }
 
-.head .hamburger{
-    display: none;
-} */
+.head #hamburger-icon{
+    display: block;
+    cursor: pointer;
+}
 
 .sect-1{
     background-image: url('images/bg-pattern-intro-mobile.svg') , linear-gradient(100deg,
@@ -208,55 +210,113 @@ footer ul a{
     color: hsl(240, 2%, 79%);
 }
 
+/*This put the hamburger navbar under the logo*/
 nav{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    padding: 2em;
     width: 90%;
     background-color: white;
+    margin-top: 30em; /*Maybe too much? I don't know..*/
+    display: none;
+}
+
+nav button{
+    border: none;
+    font-family: var(--overpass-300-600);
+    font-weight: 600;
+    background: none;
+    font-size: 20px;
+    color: hsl(209, 36%, 31%);
+}
+/* .select-btn{
+    border: none;
+    font-family: var(--overpass-300-600);
+    font-weight: 600;
+    background: none;
+    font-size: 20px;
+    color: hsl(209, 36%, 31%);
+} */
+
+.nav-links{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 90%;
+    margin: auto;
+}
+
+nav ul{
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+/*This could be closed or active, depending on it's state*/
+ul div{
+    background-color: hsl(240, 7%, 94%);
+    border-radius: 5px;
+    display: none;
+}
+/*___________*/
+nav li{
+    width: 100%;
+    line-height: 2em;
 }
 
 nav ul{
     list-style: none;
 }
 
-nav ul a{
+nav a{
     text-decoration: none;
-
-}
-/*VECCHIO *{
-    box-sizing: border-box;
-    margin: 0;
-    @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
-    font-family: 'Overpass', sans-serif;
-    font-family: 'Ubuntu', sans-serif;
+    color: hsl(207, 13%, 34%);
+    font-family: var(--overpass-300-600);
+    font-weight: 600;
 }
 
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
+.divider{
+    height: 2px;
+    width: 100%;
+    background-color: hsl(0, 0%, 71%);
+    margin: 1em;
 }
 
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+.nav-btns{
+    padding: 5px;
+    margin: 5px;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-image: linear-gradient(hsl(13, 100%, 72%),hsl(353, 100%, 62%));
-    padding: 30px 10%;
-}
-
-.nav_links a{
-    list-style: none;
-    text-decoration: none;
+#register-btn{
+    background: linear-gradient(90deg,
+        hsl(13, 100%, 72%),
+        hsl(353, 100%, 62%)
+    );
+    padding: 15px 40px; 
     color: white;
+    border-radius: 50px;
 }
 
-.nav_links li{
-    display: inline-block;
-    padding: 20px;
-} */
+button, a{
+    cursor: pointer;
+}
+
+#hamburger-icon{
+    cursor: pointer;
+}
+
+/* active states */
+.active #hamburger-icon{
+    content: url(./images/icon-close.svg);
+}
+
+.active nav{
+    display: flex;
+}
+
+.open div{
+    display: block;
+}
