@@ -35,7 +35,7 @@ body{
         hsl(13, 100%, 72%),
         hsl(353, 100%, 62%)
     );
-    background-position: center;
+    background-position: left;
     background-size: 250%;
     height: 75vh;
     border-bottom-left-radius: 70px;
@@ -324,6 +324,27 @@ footer ul{
 .open div{
     display: block;
 }
+/*MOBILE M DEVICES*/
+@media screen and (min-width: 375px) and (max-width: 424px){
+    .sect-3{
+        min-height: 100vh;
+    }
+}
+/*MOBILE L DEVICES*/
+@media screen and (min-width: 425px) and (max-width: 767px){
+    .sect-3{
+        min-height: 100vh;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .sect-3{
+        min-height: 100vh;
+    }
+    .sect-3 img{
+        width: 80%;
+    }
+}
 
 /*LARGE DESKTOP*/
 @media screen and (min-width: 992px){
@@ -347,6 +368,26 @@ footer ul{
         margin: auto;
     }
 
+    .nav-link:after{
+        content: url('./images/icon-arrow-light.svg');
+        position: absolute;
+        margin-left: -52px;
+        margin-top: 45px;
+    } 
+    /* .nav-link .select-btn{
+        border: 2px solid blue;
+        overflow: hidden;
+    } */
+
+    .nav-link .dropdown-menu{
+        display: none;
+        position: absolute;
+    }
+
+    .nav-link .select-btn:hover .dropdown-menu{
+        display: block;
+    }
+
     .nav-links{
         display: flex;
         flex-direction: row;
@@ -368,6 +409,10 @@ footer ul{
         cursor: pointer;
     }
 
+    .nav-btns:hover{
+        text-decoration: underline;
+    }
+
     #register-btn{
         background: white;
         color: hsl(356, 100%, 66%);
@@ -376,6 +421,16 @@ footer ul{
     #register-btn:hover{
         background: hsl(356, 100%, 66%);
         color: white;
+    }
+
+    button.btn.primary:hover{
+        background: hsl(356, 100%, 66%);
+        color: white;
+    }
+
+    button.btn.reverse:hover{
+        background: white;
+        color: hsl(356, 100%, 66%);;
     }
 
     .divider{
