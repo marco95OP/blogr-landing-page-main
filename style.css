@@ -241,6 +241,15 @@ nav button{
     font-size: 20px;
     color: hsl(209, 36%, 31%);
 } */
+ul.nav-link.active .dropdown-menu{
+    margin: 2em;
+    display: block;
+}
+
+.dropdown-menu{
+    transition: all 200ms ease-in-out;
+    transition-delay: 100ms;
+}
 
 .nav-links{
     display: flex;
@@ -357,6 +366,13 @@ footer ul{
     }
     .head #hamburger-icon{
         display: none;
+    }
+
+    ul.nav-link.active .dropdown-menu{
+        margin: 2em;
+        display: block;
+        margin-top: -20px;
+        padding: 10px;
     }
 
     nav{
